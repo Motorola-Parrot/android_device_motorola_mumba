@@ -24,6 +24,10 @@ PRODUCT_PACKAGES += \
     init.vendor.st21nfc.rc \
     init.oem.fingerprint2.sh
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/double-tap.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/double-tap.kl
+
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
@@ -35,6 +39,9 @@ TARGET_USES_ST_NFC := true
 
 # Perf
 TARGET_PERF_VARIANT := parrotlite
+
+# Power HAL
+$(call soong_config_set,qtipower,tap_to_wake_node,/sys/class/touchscreen/primary/gesture)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
