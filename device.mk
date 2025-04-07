@@ -36,6 +36,9 @@ TARGET_USES_ST_NFC := true
 # Perf
 TARGET_PERF_VARIANT := parrotlite
 
+# Power HAL
+$(call soong_config_set,qtipower,tap_to_wake_node,/sys/class/touchscreen/primary/gesture)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
