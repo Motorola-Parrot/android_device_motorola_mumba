@@ -18,6 +18,12 @@ TARGET_SCREEN_WIDTH := 1080
 # Display
 TARGET_SCREEN_DENSITY := 390
 
+# FM
+TARGET_HAS_FM := true
+
+PRODUCT_PACKAGES += \
+    FM2
+
 # Init
 PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
