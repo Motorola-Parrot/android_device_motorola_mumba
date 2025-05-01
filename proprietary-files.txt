@@ -495,3 +495,7 @@ odm/etc/permissions/sku_bne/android.hardware.se.omapi.ese.xml
 odm/etc/permissions/sku_dne/android.hardware.nfc.ese.xml
 odm/etc/permissions/sku_dne/android.hardware.se.omapi.ese.xml
 
+# Properties (SKU)
+product/etc/motorola/props/hardware.sku.XT2537-3.prop:product/etc/hardware.sku.XT2537-3.prop
+product/etc/motorola/props/hardware.sku.XT2537-4.prop:product/etc/hardware.sku.XT2537-4.prop
+product/etc/motorola/props/hardware.sku.XT2537-5.prop:product/etc/hardware.sku.XT2537-5.prop
