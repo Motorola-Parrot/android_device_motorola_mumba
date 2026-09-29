@@ -9,6 +9,9 @@ vendor.audio.max.temp=60.0
 # Camera
 persist.vendor.camera.physical.num=3
 
+# CDSP
+vendor.fastrpc.disable.cdsprpcd.daemon=1
+
 # Display
 ro.vendor.display.sensortype=2
 ro.vendor.display.svi=1
