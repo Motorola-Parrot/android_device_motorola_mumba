@@ -392,6 +392,16 @@ system/usr/keylayout/gpio-keys.kl:vendor/usr/keylayout/gpio-keys.kl
 vendor/usr/idc/uinput-fpc.idc
 vendor/usr/keylayout/uinput-fpc.kl
 
+# Secure element
+vendor/bin/hw/android.hardware.secure_element-service.thales
+vendor/etc/init/android.hardware.secure_element_gto.rc:vendor/etc/init/android.hardware.secure_element_thales.rc
+vendor/etc/libse-gto-hal.conf
+vendor/etc/permissions/android.hardware.opengles.aep.xml
+vendor/lib64/android.hardware.secure_element.thales.libse.so
+vendor/lib64/libextra-thales.so
+vendor/lib64/libnativecospatchkernel-thales.so
+vendor/lib64/libnativecosupdateapi-thales.so
+
 # Sensors configs
 vendor/etc/sensors/config/hx322x.json
 vendor/etc/sensors/config/icm4x6xa_0.json
@@ -458,4 +468,30 @@ vendor/firmware/csot_chipone_firmware.bin:recovery/root/lib/firmware/csot_chipon
 vendor/firmware/ILITEK_FW_TXD
 vendor/firmware/boe_chipone_firmware.bin
 vendor/firmware/csot_chipone_firmware.bin
+
+# NFC
+vendor/bin/STFlashTool
+vendor/etc/init/nfc-service-st.rc
+vendor/etc/libnfc-hal-st-prc.conf
+vendor/etc/libnfc-hal-st.conf
+vendor/etc/libnfc-nci-st-felica.conf
+vendor/etc/libnfc-nci-st.conf
+vendor/etc/st54l_conf_ds.txt
+vendor/etc/st54l_conf_ss.txt
+vendor/lib64/libstnfc-auth.so
+vendor/lib64/libstnfc-streset.so
+vendor/lib64/nfc_nci.st21nfc.st.so
+
+# NFC firmware
+vendor/firmware/st21nfc_fw.bin
+vendor/firmware/st21nfc_fw7.bin
+vendor/firmware/st54j_fw.bin
+vendor/firmware/st54l_fw.bin
+vendor/firmware/st54l_fw_felica.bin
+
+# NFC SKU permissions
+odm/etc/permissions/sku_bne/android.hardware.nfc.ese.xml
+odm/etc/permissions/sku_bne/android.hardware.se.omapi.ese.xml
+odm/etc/permissions/sku_dne/android.hardware.nfc.ese.xml
+odm/etc/permissions/sku_dne/android.hardware.se.omapi.ese.xml
 

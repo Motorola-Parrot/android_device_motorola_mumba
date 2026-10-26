@@ -21,7 +21,11 @@ TARGET_SCREEN_DENSITY := 390
 # Init
 PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
+    init.vendor.st21nfc.rc \
     init.oem.fingerprint2.sh
+
+# NFC
+TARGET_USES_ST_NFC := true
 
 # Perf
 TARGET_PERF_VARIANT := parrotlite
