@@ -7,23 +7,49 @@
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# API Level
+BOARD_SHIPPING_API_LEVEL := 202404
+PRODUCT_SHIPPING_API_LEVEL := 36
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
-# Screen
+# Display
 TARGET_SCREEN_DENSITY := 390
 
-# Shipping API Level
-BOARD_SHIPPING_API_LEVEL := 202404
-PRODUCT_SHIPPING_API_LEVEL := 36
+# Init
+PRODUCT_PACKAGES += \
+    init.mmi.overlay.rc \
+    init.oem.fingerprint2.sh
+
+# Perf
+TARGET_PERF_VARIANT := parrotlite
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# VINTF
+ODM_MANIFEST_SKUS += b d dn dne n ne
+ODM_MANIFEST_B_FILES := \
+    $(LOCAL_PATH)/configs/vintf/sku/manifest_b.xml \
+    device/motorola/sm6450-common/configs/vintf/manifest_parrot_ss.xml
+ODM_MANIFEST_D_FILES := $(LOCAL_PATH)/configs/vintf/sku/manifest_d.xml
+ODM_MANIFEST_DN_FILES := $(LOCAL_PATH)/configs/vintf/sku/manifest_dn.xml
+ODM_MANIFEST_DNE_FILES := $(LOCAL_PATH)/configs/vintf/sku/manifest_dne.xml
+ODM_MANIFEST_N_FILES := \
+    $(LOCAL_PATH)/configs/vintf/sku/manifest_n.xml \
+    device/motorola/sm6450-common/configs/vintf/manifest_parrot_ss.xml
+ODM_MANIFEST_NE_FILES := \
+    $(LOCAL_PATH)/configs/vintf/sku/manifest_ne.xml \
+    device/motorola/sm6450-common/configs/vintf/manifest_parrot_ss.xml
 
 # Inherit from motorola sm6450-common
 $(call inherit-product, device/motorola/sm6450-common/common.mk)
 
 # Vendor
 $(call inherit-product, vendor/motorola/mumba/mumba-vendor.mk)
+
+# Wi-Fi
+TARGET_WIFI_VARIANTS := adrastea

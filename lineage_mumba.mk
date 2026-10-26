@@ -19,4 +19,12 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := motorola moto g57 power
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="mumba_g-user 16 W1WAAS36.48-12-23-5 88187-83dd13 release-keys" \
+    BuildFingerprint=motorola/mumba_g/mumba:16/W1WAAS36.48-12-23-5/88187-83dd13:user/release-keys \
+    DeviceName=mumba \
+    DeviceProduct=mumba_g \
+    SystemDevice=mumba \
+    SystemName=mumba_g
+
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
