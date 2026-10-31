@@ -24,6 +24,12 @@ PRODUCT_PACKAGES += \
     init.vendor.st21nfc.rc \
     init.oem.fingerprint2.sh
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResDevice \
+    SettingsResDevice \
+    SystemUIResDevice
+
 # NFC
 TARGET_USES_ST_NFC := true
 
