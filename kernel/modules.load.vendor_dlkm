@@ -1,0 +1,10 @@
+qca_cld3_adrastea.ko
+fs1815_dlkm.ko
+fs1815_mngr_dlkm.ko
+awinic_sar.ko
+st54spi.ko
+st21nfc.ko
+chipone_tddi_v3_mmi.ko
+ilitek_v4_mmi.ko
+fm_ctrl.ko
+anc_fps_mmi.ko
