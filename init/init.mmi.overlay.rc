@@ -1,8 +1,5 @@
 import /vendor/etc/init/hw/init.vendor.st21nfc.rc
 
-on early-init
-   exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -r -d /vendor/lib/modules zram
-
 on fs
 	insmod /vendor/lib/modules/leds_aw99703.ko
 	insmod /vendor/lib/modules/ktd3136_bl.ko
@@ -18,9 +15,6 @@ on fs
 	insmod /vendor/lib/modules//awinic_sar.ko
 	insmod /vendor/lib/modules//sx937x_sar.ko
     insmod /vendor/lib/modules/fm_ctrl.ko
-
-	#zram wb
-    mount_all /vendor/etc/fstab.qcom.zram --early
 
 on post-fs-data
     # Fingerprint
